@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Urbanist', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121829;
+  color: #fff;
+}
+
+.card {
+  width: 90%;
+  max-width: 500px;
+  background: linear-gradient(135deg, #203a43, #2c5364);
+  margin: 30px auto;
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  width: 70%;
+  font-size: 16px;
+  background: #f2f2f2;
+  color: #333;
+}
+
+.search button {
+  border: none;
+  background: #f2f2f2;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.search button img {
+  width: 18px;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 55px;
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 10;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.autocomplete-list div {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.autocomplete-list div:hover, .autocomplete-list .active {
+  background: #e0e0e0;
+}
+
+.autocomplete-list::-webkit-scrollbar {
+  display: none;
+}
+
+.toggle {
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.unit-toggle {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.error {
+  display: none;
+  font-size: 14px;
+  color: #ff6b6b;
+  margin-top: 10px;
+}
+
+.weather {
+  display: none;
+}
+
+.location {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  margin-top: 25px;
+}
+
+.weather-icon {
+  width: 120px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  margin-bottom: 0;
+}
+
+.temp {
+  font-size: 48px;
+  margin: 0 0 15px;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.extra-message {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.forecast-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 5px;
+  padding: 0 35px;
+  text-align: left;
+}
+
+.hourly-forecast {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 10px 35px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.hourly-forecast::-webkit-scrollbar {
+  display: none;
+}
+
+.hour-card {
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  scroll-snap-align: start;
+  width: 70px;
+}
+
+.hour-card img {
+  width: 40px;
+  margin: 5px 0;
+}
+
+.hour-card p {
+  font-size: 12px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.col img {
+  width: 20px;
+}
+
+.humidity, .wind {
+  font-size: 15px;
+}
+
